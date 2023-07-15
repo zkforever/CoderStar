@@ -151,15 +151,14 @@
 	<body>
 		<!-- <div class="download"><embed id="download-icon" src="img/download.svg" type="image/svg+xml" /></div> -->
 		<div class="download">
-			<img src="img/download.svg" />
-			<div>قم بالتحميل من متجر البرامج</div>
+			<img class= "downloadImg" src="img/download.svg" />
+			<!-- <div>قم بالتحميل من متجر البرامج</div> -->
 		</div>
 
 		<div class="topTitle">
 			<img src="img/logo.png">
 		</div>
 		<div class="topTitleDesp">It's time to live out your cartoon dreams!</div>
-		<div class="topTitleDesp">حان الوقت لتحقيق أحلامك الكارتونية!</div>
 		<!-- Swiper -->
 		<div class="swiper mySwiper">
 			<div class="swiper-wrapper">
@@ -169,8 +168,7 @@
 
 		<div class="container-flex2"></div>
 		<div class="downloadBottom">
-			<img src="img/download.svg" />
-			<img src="img/downloadAr.svg" />
+			<img class = "downloadImg" src="img/download.svg" />
 		</div>
 
 
@@ -230,9 +228,45 @@
 				},
 			});
 			let url = "https://apps.apple.com/us/app/Kumantu/id1549560910?l=us"
+			let urlAR = "https://apps.apple.com/ar/app/Kumantu/id1549560910?l=ar"
+			let urlzh = "https://apps.apple.com/us/app/%E9%85%B7%E6%BC%AB%E5%9B%BE/id1549560910?l=zh"
+			
+			let topDesAR = "حان الوقت لتحقيق أحلامك الكارتونية!";
+			let topDesUS = "It's time to live out your cartoon dreams!";
+			let topDesZH = "是时候实现你的卡通梦想了!";
+			let img = "img/download.svg";
+			let imgAr = "img/downloadAr.svg";
+			let imgzh = "img/downloadzh.svg";
+			if(getQueryString("l") == "ar") {
+				$(".topTitleDesp").text(topDesAR);
+				$(".downloadImg").attr("src", imgAr);
+			}else if(getQueryString("l") == "zh") {
+				$(".topTitleDesp").text(topDesZH);
+				$(".downloadImg").attr("src", imgzh);
+			} else {
+				$(".topTitleDesp").text(topDesUS);
+				$(".downloadImg").attr("src", img);
+			}
 			$(".download,.downloadBottom,.block,.swiper-slide,.topTitle,.topTitleDesp").on("click", function(e) {
-				window.open(url);
+				if(getQueryString("l") == "ar") {
+					window.open(urlAR);
+				} else if (getQueryString("l") == "zh"){
+					window.open(urlzh);
+				}else {
+					window.open(url);
+				}
 			});
+			
+			
+			
+			function getQueryString(name) {
+			    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			    let r = window.location.search.substr(1).match(reg);
+			    if (r != null) {
+			        return decodeURIComponent(r[2]);
+			    };
+			    return null;
+			 }
 		</script>
 	</body>
 
