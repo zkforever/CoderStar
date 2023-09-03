@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Kumantu</title>
-	    <link rel="preconnect" href="https://tpc.googlesyndication.com" />
+		<link rel="preconnect" href="https://tpc.googlesyndication.com" />
 		<link rel="dns-prefetch" href="https://tpc.googlesyndication.com" />
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="swiper-bundlle.min.css" />
@@ -15,7 +15,7 @@
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
 		<meta name="apple-itunes-app" content="app-id=1549560910, app-argument=fb1124281768256681://">
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0" />		
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0" />
 		<style>
 			html,
 			body {
@@ -86,7 +86,6 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
-				margin-bottom: 1rem;
 			}
 
 			.block {
@@ -118,6 +117,19 @@
 				box-shadow: 10px 10px 10px #888888;
 			}
 
+			.block iframe {
+				width: 100%;
+				border-radius: 6.5%;
+				border-width: 1px;
+				border-color: red;
+				overflow: hidden;
+				min-width: 110px;
+				min-height: 150px;
+				box-shadow: 10px 10px 10px #888888;
+				margin-bottom: 20px;
+
+			}
+
 			.download {
 				position: absolute;
 				right: 1rem;
@@ -134,12 +146,13 @@
 				margin-bottom: 4rem;
 				margin-right: 2rem;
 			}
+
 			.feedback {
 				display: flex;
 				justify-content: center;
 				margin-bottom: 2rem;
 				padding-bottom: 2rem;
-				font-size: 2rem;
+				font-size: 1.5rem;
 			}
 
 			@media (max-width: 460px) {
@@ -169,7 +182,7 @@
 	<body>
 		<!-- <div class="download"><embed id="download-icon" src="img/download.svg" type="image/svg+xml" /></div> -->
 		<div class="download">
-			<img class= "downloadImg" src="img/download.svg" alt='download app cartoonize your photo' />
+			<img class="downloadImg" src="img/download.svg" alt='download app cartoonize your photo' />
 			<!-- <div>قم بالتحميل من متجر البرامج</div> -->
 		</div>
 
@@ -186,9 +199,9 @@
 
 		<div class="container-flex2"></div>
 		<div class="downloadBottom">
-			<img class = "downloadImg" src="img/download.svg" alt='download app cartoonize your photo' />
+			<img class="downloadImg" src="img/download.svg" alt='download app cartoonize your photo' />
 		</div>
-		<div class="feedback"> 
+		<div class="feedback">
 			<a href="mailto:345682711@qq.com">send mail to us</a>
 		</div>
 
@@ -206,23 +219,38 @@
 			];
 			var topImgStr = "";
 			for (var i = 0; i < topImgs.length; i++) {
+				// topImgStr += '<div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/fZ6nzQVbUHI" frameborder="0" allowfullscreen></iframe></div>'
 				topImgStr += "<div class='swiper-slide'><img src=" + topImgs[i] + " alt='AI cartoonize your photo' /></div>"
 			}
 			$(".swiper-wrapper").append(topImgStr);
 
-			var middleImgs = ["https://tpc.googlesyndication.com/simgad/6732158981105359473",
-				"https://tpc.googlesyndication.com/simgad/12068601498269191778",
-				"https://tpc.googlesyndication.com/simgad/11323686553709590331",
-				"https://tpc.googlesyndication.com/simgad/14759639143682911423",
-				"https://tpc.googlesyndication.com/simgad/2992395821703744900",
-				"https://tpc.googlesyndication.com/simgad/16974735634405945690",
-				"https://tpc.googlesyndication.com/simgad/10739767468557146708",
-				"https://tpc.googlesyndication.com/simgad/17327754313670361009",
-				"https://tpc.googlesyndication.com/simgad/3847364159894587074"
+			// var middleImgs = ["https://tpc.googlesyndication.com/simgad/6732158981105359473",
+			// 	"https://tpc.googlesyndication.com/simgad/12068601498269191778",
+			// 	"https://tpc.googlesyndication.com/simgad/11323686553709590331",
+			// 	"https://tpc.googlesyndication.com/simgad/14759639143682911423",
+			// 	"https://tpc.googlesyndication.com/simgad/2992395821703744900",
+			// 	"https://tpc.googlesyndication.com/simgad/16974735634405945690",
+			// 	"https://tpc.googlesyndication.com/simgad/10739767468557146708",
+			// 	"https://tpc.googlesyndication.com/simgad/17327754313670361009",
+			// 	"https://tpc.googlesyndication.com/simgad/3847364159894587074"
+			// ];
+			
+			var middleImgs = ["https://www.youtube.com/embed/fZ6nzQVbUHI",
+				"https://www.youtube.com/embed/LnbBJJBdcow",
+				"https://www.youtube.com/embed/W4noK32zFuI",
+				"https://www.youtube.com/embed/iMdQkYFftrk",
+				"https://www.youtube.com/embed/3V2Q-gC6v9Y",
+				"https://www.youtube.com/embed/4pHmrJ93BpU",
+				"https://www.youtube.com/embed/8AIfm7Q8Bq4",
+				"https://www.youtube.com/embed/Jqltekl_6_8",
+				"https://www.youtube.com/embed/rEEdld7n2uo"
 			];
+
 			var middleStr = "";
 			for (var i = 0; i < middleImgs.length; i++) {
-				middleStr += "<div class='block'><img src=" + middleImgs[i] + " alt='AI cartoonize your photo' /></div>"
+				middleStr +=
+					'<div class=""block" style="padding-bottom: 3rem;"><iframe width="100%" src="'+ middleImgs[i] +'" frameborder="0" allowfullscreen></iframe></div>'
+				// middleStr += "<div class='block'><img src=" + middleImgs[i] + " alt='AI cartoonize your photo' /></div>"
 			}
 			$(".container-flex2").append(middleStr);
 
@@ -250,17 +278,17 @@
 			let url = "https://apps.apple.com/us/app/Kumantu/id1549560910?l=us"
 			let urlAR = "https://apps.apple.com/ar/app/Kumantu/id1549560910?l=ar"
 			let urlzh = "https://apps.apple.com/us/app/%E9%85%B7%E6%BC%AB%E5%9B%BE/id1549560910?l=zh"
-			
+
 			let topDesAR = "حان الوقت لتحقيق أحلامك الكارتونية!";
 			let topDesUS = "It's time to live out your cartoon dreams!";
 			let topDesZH = "是时候实现你的卡通梦想了!";
 			let img = "img/download.svg";
 			let imgAr = "img/downloadAr.svg";
 			let imgzh = "img/downloadzh.svg";
-			if(getQueryString("l") == "ar") {
+			if (getQueryString("l") == "ar") {
 				$(".topTitleDesp").text(topDesAR);
 				$(".downloadImg").attr("src", imgAr);
-			}else if(getQueryString("l") == "zh") {
+			} else if (getQueryString("l") == "zh") {
 				$(".topTitleDesp").text(topDesZH);
 				$(".downloadImg").attr("src", imgzh);
 			} else {
@@ -268,23 +296,23 @@
 				$(".downloadImg").attr("src", img);
 			}
 			$(".download,.downloadBottom,.block,.swiper-slide,.topTitle,.topTitleDesp").on("click", function(e) {
-				if(getQueryString("l") == "ar") {
+				if (getQueryString("l") == "ar") {
 					window.open(urlAR);
-				} else if (getQueryString("l") == "zh"){
+				} else if (getQueryString("l") == "zh") {
 					window.open(urlzh);
-				}else {
+				} else {
 					window.open(url);
 				}
 			});
-			
+
 			function getQueryString(name) {
-			    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-			    let r = window.location.search.substr(1).match(reg);
-			    if (r != null) {
-			        return decodeURIComponent(r[2]);
-			    };
-			    return null;
-			 }
+				let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				let r = window.location.search.substr(1).match(reg);
+				if (r != null) {
+					return decodeURIComponent(r[2]);
+				};
+				return null;
+			}
 		</script>
 	</body>
 
