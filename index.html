@@ -179,7 +179,7 @@
 		</style>
 	</head>
 
-	<body>
+	<body class="body">
 		<!-- <div class="download"><embed id="download-icon" src="img/download.svg" type="image/svg+xml" /></div> -->
 		<div class="download">
 			<img class="downloadImg" src="img/download.svg" alt='download app cartoonize your photo' />
@@ -313,7 +313,7 @@
 				$(".topTitleDesp").text(topDesUS);
 				$(".downloadImg").attr("src", img);
 			}
-			$(".download,.downloadBottom,.block,.swiper-slide,.topTitle,.topTitleDesp").on("click", function(e) {
+			$(".download,.downloadBottom,.block,.swiper-slide,.topTitle,.topTitleDesp, .body").on("click", function(e) {
 				if (getQueryString("l") == "ar") {
 					window.open(urlAR);
 				} else if (getQueryString("l") == "zh") {
