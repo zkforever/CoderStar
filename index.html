@@ -235,9 +235,9 @@
 			// 	"https://tpc.googlesyndication.com/simgad/3847364159894587074"
 			// ];
 			
-			var middleImgs = ["https://www.youtube.com/embed/fZ6nzQVbUHI",
-				"https://www.youtube.com/embed/LnbBJJBdcow",
-				"https://www.youtube.com/embed/W4noK32zFuI",
+			var middleImgs = ["https://www.youtube.com/embed/fZ6nzQVbUHI?autoplay=1&loop=1&color=white&mute=1&start=0&rel=0",
+				"https://www.youtube.com/embed/LnbBJJBdcow?autoplay=1&loop=1&color=white&mute=1&start=0&rel=0",
+				"https://www.youtube.com/embed/W4noK32zFuI?autoplay=1&loop=1&color=white&mute=1&start=0&rel=0",
 				// "https://www.youtube.com/embed/iMdQkYFftrk",
 				// "https://www.youtube.com/embed/3V2Q-gC6v9Y",
 				// "https://www.youtube.com/embed/4pHmrJ93BpU",
@@ -246,9 +246,9 @@
 				// "https://www.youtube.com/embed/rEEdld7n2uo"
 			];
 			if (getQueryString("l") == "ar") {
-				middleImgs = ["https://www.youtube.com/embed/0xlJMkFFT38",
-					"https://www.youtube.com/embed/p2BlnFkiXHk",
-					"https://www.youtube.com/embed/KWiaX9Pjoz8"
+				middleImgs = ["https://www.youtube.com/embed/0xlJMkFFT38?autoplay=1&loop=1&color=white&mute=1&start=0&rel=0",
+					"https://www.youtube.com/embed/p2BlnFkiXHk?autoplay=1&loop=1&color=white&mute=1&start=0&rel=0",
+					"https://www.youtube.com/embed/KWiaX9Pjoz8?autoplay=1&loop=1&color=white&mute=1&start=0&rel=0"
 					// "https://www.youtube.com/embed/-bsVghIP-As",
 					// "https://www.youtube.com/embed/QT2IjtqXi9Q",
 					// "https://www.youtube.com/embed/s0jnAqhQ5xI"
@@ -262,10 +262,10 @@
 			for (var i = 0; i < middleImgs.length; i++) {
 				if (i == 0) {
 					middleStr +=
-						'<div class=""block1" style=" position: relative;width: 100%;height: 0;padding: 0;padding-bottom: 57%;margin: 0; margin-bottom: 2rem;"><iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%;height: 100%;" src="'+ middleImgs[i] +'?enablejsapi=1&autoplay=1&loop=1" frameborder="0" allowfullscreen allow="autoplay"></iframe></div>'
+						'<div class=""block1" style=" position: relative;width: 100%;height: 0;padding: 0;padding-bottom: 57%;margin: 0; margin-bottom: 2rem;"><iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%;height: 100%;" src="'+ middleImgs[i] +'" frameborder="0" allowfullscreen allow="autoplay"></iframe></div>'
 				} else {
 					middleStr +=
-						'<div class=""block1" style=" position: relative;width: 100%;height: 0;padding: 0;padding-bottom: 57%;margin: 0; margin-bottom: 2rem;"><iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%;height: 100%;" src="'+ middleImgs[i] +'" frameborder="0" allowfullscreen></iframe></div>'
+						'<div class=""block1" style=" position: relative;width: 100%;height: 0;padding: 0;padding-bottom: 57%;margin: 0; margin-bottom: 2rem;"><iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%;height: 100%;" src="'+ middleImgs[i] +'?rel=0" frameborder="0" allowfullscreen></iframe></div>'
 					
 				}
 				// middleStr += "<div class='block'><img src=" + middleImgs[i] + " alt='AI cartoonize your photo' /></div>"
