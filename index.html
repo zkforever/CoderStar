@@ -88,42 +88,42 @@
 				text-align: center;
 			}
 
-			.block {
+			.block1 {
 				/* padding-top: 30%; */
 				margin-top: 3%;
 				border-radius: 10%;
 				/* background-color: orange; */
-				width: 30%;
+				width: 90%;
 			}
 
 			.container-flex2 {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-around;
-				margin-left: 10%;
-				margin-right: 10%;
+				margin-left: 5%;
+				margin-right: 5%;
 				margin-bottom: 2rem;
 				margin-top: 1rem;
 			}
 
-			.block img {
+			.block1 img {
 				width: 100%;
 				border-radius: 6.5%;
 				border-width: 1px;
 				border-color: red;
 				overflow: hidden;
-				min-width: 110px;
+				min-width: 220px;
 				min-height: 110px;
 				box-shadow: 10px 10px 10px #888888;
 			}
 
-			.block iframe {
+			.block1 iframe {
 				width: 100%;
 				border-radius: 6.5%;
 				border-width: 1px;
 				border-color: red;
 				overflow: hidden;
-				min-width: 110px;
+				min-width: 200px;
 				min-height: 150px;
 				box-shadow: 10px 10px 10px #888888;
 				margin-bottom: 20px;
@@ -238,20 +238,20 @@
 			var middleImgs = ["https://www.youtube.com/embed/fZ6nzQVbUHI",
 				"https://www.youtube.com/embed/LnbBJJBdcow",
 				"https://www.youtube.com/embed/W4noK32zFuI",
-				"https://www.youtube.com/embed/iMdQkYFftrk",
-				"https://www.youtube.com/embed/3V2Q-gC6v9Y",
-				"https://www.youtube.com/embed/4pHmrJ93BpU",
-				"https://www.youtube.com/embed/8AIfm7Q8Bq4",
-				"https://www.youtube.com/embed/Jqltekl_6_8",
-				"https://www.youtube.com/embed/rEEdld7n2uo"
+				// "https://www.youtube.com/embed/iMdQkYFftrk",
+				// "https://www.youtube.com/embed/3V2Q-gC6v9Y",
+				// "https://www.youtube.com/embed/4pHmrJ93BpU",
+				// "https://www.youtube.com/embed/8AIfm7Q8Bq4",
+				// "https://www.youtube.com/embed/Jqltekl_6_8",
+				// "https://www.youtube.com/embed/rEEdld7n2uo"
 			];
 			if (getQueryString("l") == "ar") {
 				middleImgs = ["https://www.youtube.com/embed/0xlJMkFFT38",
 					"https://www.youtube.com/embed/p2BlnFkiXHk",
-					"https://www.youtube.com/embed/KWiaX9Pjoz8",
-					"https://www.youtube.com/embed/-bsVghIP-As",
-					"https://www.youtube.com/embed/QT2IjtqXi9Q",
-					"https://www.youtube.com/embed/s0jnAqhQ5xI"
+					"https://www.youtube.com/embed/KWiaX9Pjoz8"
+					// "https://www.youtube.com/embed/-bsVghIP-As",
+					// "https://www.youtube.com/embed/QT2IjtqXi9Q",
+					// "https://www.youtube.com/embed/s0jnAqhQ5xI"
 					// "https://www.youtube.com/embed/aNVEuWyzb6s"
 					// "https://www.youtube.com/embed/Jqltekl_6_8",
 					// "https://www.youtube.com/embed/rEEdld7n2uo"
@@ -260,8 +260,14 @@
 
 			var middleStr = "";
 			for (var i = 0; i < middleImgs.length; i++) {
-				middleStr +=
-					'<div class=""block" style="padding-bottom: 3rem;"><iframe width="100%" src="'+ middleImgs[i] +'" frameborder="0" allowfullscreen></iframe></div>'
+				if (i == 0) {
+					middleStr +=
+						'<div class=""block1" style=" position: relative;width: 100%;height: 0;padding: 0;padding-bottom: 57%;margin: 0; margin-bottom: 2rem;"><iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%;height: 100%;" src="'+ middleImgs[i] +'?enablejsapi=1&autoplay=1&loop=1" frameborder="0" allowfullscreen allow="autoplay"></iframe></div>'
+				} else {
+					middleStr +=
+						'<div class=""block1" style=" position: relative;width: 100%;height: 0;padding: 0;padding-bottom: 57%;margin: 0; margin-bottom: 2rem;"><iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%;height: 100%;" src="'+ middleImgs[i] +'" frameborder="0" allowfullscreen></iframe></div>'
+					
+				}
 				// middleStr += "<div class='block'><img src=" + middleImgs[i] + " alt='AI cartoonize your photo' /></div>"
 			}
 			$(".container-flex2").append(middleStr);
